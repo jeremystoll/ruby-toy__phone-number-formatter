@@ -2,11 +2,14 @@
 # returns a properly formatted phone number.
 
 def format_phone_number(phone_number_str)
+ ret = []
+  fin = phone_number_str.split(/\W+/).join.split(//)
+  fin.each do |n|
+      ret << n.to_i
+  end
+  x = ret.first(3)
+  y = ret[3..5]
+  z = ret.last(4)
+return "(" + x.join + ") " + y.join + "-" + z.join
 
-  if phone_number_str.length == 10
-    phone_split = phone_number_str.split(//)
-    puts "(" + phone_split.first(3).join + ") " + phone_split[3..5].join + "-" + phone_split.last(4).join
-
-  else puts "Sorry, wrong number of digits."
-  end  
 end
