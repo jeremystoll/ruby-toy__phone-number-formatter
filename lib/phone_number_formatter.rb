@@ -10,5 +10,3 @@ def format_phone_number(phone_number_str)
   else puts "Sorry, wrong number of digits."
   end  
 end
-
-format_phone_number("4022133739") 
